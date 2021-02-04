@@ -16,8 +16,8 @@ BACKGROUND IMAGE
     position: relative;
     /* fullscreen background img */
     background-image:
-        linear-gradient(90deg, rgb(75, 108, 183, 0.2), rgb(24, 40, 72, 0.4)),
-        url('../img/background.jpg');
+        linear-gradient(90deg, rgb(75, 108, 183, 0.2), rgb(24, 40, 72, 0.6)),
+        url("../img/background.JPG");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -46,7 +46,7 @@ NAVIGATION OPEN
 .navbar {
     right: -330px;
     /* smooth navbar open transition */
-    transition: right 0.8s cubic-bezier(1, 0, 1, 1);
+    transition: right 0.8s cubic-bezier(1, 0, 0, 1);
 }
 
 /* show the navbar after toggle */
