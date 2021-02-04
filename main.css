@@ -46,7 +46,7 @@ NAVIGATION OPEN
 .navbar {
     right: -330px;
     /* smooth navbar open transition */
-    transition: right 0.8s; cubic-bezier(1, 0, 1, 1);
+    transition: right 0.8s cubic-bezier(1, 0, 1, 1);
 }
 
 /* show the navbar after toggle */
