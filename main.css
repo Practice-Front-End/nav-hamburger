@@ -42,17 +42,29 @@ NAVIGATION OPEN
     justify-content: center;
 }
 
+/* hide the navbar before toggle */
+.navbar {
+    right: -330px;
+    /* smooth navbar open transition */
+    transition: right 0.8s; cubic-bezier(1, 0, 1, 1);
+}
+
+/* show the navbar after toggle */
+.toggle-change {
+    right: 0px;
+}
+
 /****************************************
 HAMBURGER ICON
 ****************************************/
 
 /* size, location, spacing */
 .hamburger-menu {
-    width: 40px;
-    height: 36px;
+    width: 35px;
+    height: 30px;
     position: fixed;
-    top: 40px;
-    right: 40px;
+    top: 50px;
+    right: 50px;
     cursor: pointer;
     /* space between lines */
     display: flex;
@@ -63,22 +75,21 @@ HAMBURGER ICON
 /* style three lines */
 .line {
     width: 100%;
-    height: 4px;
-    border-radius: 2px;
+    height: 3px;
     background-color: var(--nav-color);
+    /* hamburger toggle speed to add later */
+    transition: all 0.6s;
 }
 
 /****************************************
-HAMBURGER TRANSFORM (X)
+HAMBURGER "X"
 ****************************************/
 
-/* rotate top/bottom lines AND translate into position*/
-.line-1 {transform: rotateZ(-45deg) translate(-8px, -6px);}
-.line-3 {transform: rotateZ(45deg) translate(-8px, 6px);}
-
+/* rotate lines to make an "x" on .toggle-change (javascript) */
+.toggle-change .line-1 {transform: rotateZ(-45deg) translate(-8px, 6px);}
+.toggle-change .line-3 {transform: rotateZ(45deg) translate(-8px, -6px);}
 /* hide the middle line */
-.line-2 {opacity: 0;}
-
+.toggle-change .line-2 {opacity: 0;}
 
 /*************************************
 LIST ITEMS (NAVBAR)
@@ -124,7 +135,7 @@ LINK EFFECTS (NAVBAR)
     left: 0;
     /* hide link highlight before hover */
     transform: scaleX(0);
-    transition: transform 0.2s;
+    transition: transform 0.4s;
 }
 
 /* ensure "content" is correctly placed */
