@@ -1,3 +1,3 @@
 # hamburger-menu
 
-https://practice-full-stack.github.io/nav-hamburger/
+https://practice-front-end.github.io/nav-hamburger/
